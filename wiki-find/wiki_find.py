@@ -6,7 +6,7 @@ import wikipedia
 from random_word import RandomWords
 from tkinter import *
 
-#Fuction that generates random wikipedia page
+#Fuction that generates random wikipedia page (not necessary due to wiki.random(pages=1))
 def random_wiki(occurances):
     lst = []
     #Occurances is an input of how many articles you want
