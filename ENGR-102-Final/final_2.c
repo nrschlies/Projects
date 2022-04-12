@@ -22,7 +22,6 @@
 
 int fd;
 
-
 //define L298N control pins in wPi system
 #define ENA 0  //left motor speed pin ENA connect to PCA9685 port 0
 #define ENB 1  //right motor speed pin ENB connect to PCA9685 port 1
@@ -40,6 +39,7 @@ int fd;
 #define short_delay 200
 #define long_delay  300
 #define extra_long_delay 400
+
 //Speeds
 #define high_speed 3000  // Max pulse length out of 4096
 #define mid_speed  2000  // Max pulse length out of 4096
@@ -47,6 +47,7 @@ int fd;
 #define SPEED 2000
 #define HIGH_SPEED 3000
 #define LOW_SPEED 1500
+
 //define IR tracking sensor wPi pin#
 #define sensor1 21 // No.1 sensor from far left to wPi#21 Physical pin#29
 #define sensor2 22 // No.2 sensor from left to wPi#22 Physical pin#31
@@ -187,7 +188,7 @@ int both_modes() {
 		printf("Error in setup\n");
 		return fd;
 	}
-		// following 5 lines define ctrl-C events
+	// following 5 lines define ctrl-C events
    	struct sigaction sigIntHandler;
    	sigIntHandler.sa_handler = my_handler;
    	sigemptyset(&sigIntHandler.sa_mask);
