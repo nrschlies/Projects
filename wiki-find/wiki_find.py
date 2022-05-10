@@ -1,15 +1,19 @@
 """
 Written by: Noah Schliesman
-Utilizes wikipedia and random python libraries to generate random word summaries
+Utilizes wikipedia, random, and tkinter libraries to generate random word summaries.
 """
 import wikipedia
 from random_word import RandomWords
 from tkinter import *
 
-#Fuction that generates random wikipedia page (not necessary due to wiki.random(pages=1))
 def random_wiki(occurances):
+    """
+    Generates random word and searches wikipedia for that word.
+    Input is occurances (how many articles you want).
+    Calls draw() which takes in the word and wikipedia summary and
+    puts that into a tkinter window.
+    """
     lst = []
-    #Occurances is an input of how many articles you want
     for i in range(occurances):
         r = RandomWords()
         word = r.get_random_word()
@@ -17,8 +21,11 @@ def random_wiki(occurances):
         texts = page.summary
         draw(word, texts)
         
-# Function that creates a tkinter box and populates it with wikipedia data
 def draw(word, texts):
+    """
+    Takes in wikipedia word and summary text and outputs into
+    a tkinter window.
+    """
     top = Tk()
     text = Text(top)
     text.insert(INSERT, str(texts))
@@ -26,5 +33,5 @@ def draw(word, texts):
     top.title(str(word))
     top.mainloop()
 
-#call to function
-random_wiki(2)
+if __name__ = "__main__":
+    random_wiki(2) #Example: get 2 random summaries
