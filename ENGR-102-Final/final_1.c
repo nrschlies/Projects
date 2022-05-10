@@ -7,7 +7,6 @@
  * Michaela Divito: mdivito@sandiego.edu
  * Jackson Hopper: jhopper@sandiego.edu
  * Mohammed Alghoribi: malghoribi@sandiego.edu
- * 
 */
 
 #include "pca9685/pca9685.h"
@@ -40,6 +39,7 @@ int SPEED;
 #define short_delay 200
 #define long_delay  300
 #define extra_long_delay 400
+
 //define IR tracking sensor wPi pin#
 #define sensor1 21 // No.1 sensor from far left to wPi#21 Physical pin#29
 #define sensor2 22 // No.2 sensor from left to wPi#22 Physical pin#31
@@ -74,6 +74,7 @@ void setup(){
 	digitalWrite(IN4,LOW);
 	
 }
+
 //IR Tracking Commands
 void go_Back(int fd,int l_speed,int r_speed) {
     digitalWrite(IN1,HIGH);
@@ -83,6 +84,7 @@ void go_Back(int fd,int l_speed,int r_speed) {
     pca9685PWMWrite(fd, ENA, 0, l_speed);
     pca9685PWMWrite(fd, ENB, 0, r_speed);
 }
+
 void go_Advance(int fd,int l_speed,int r_speed) {
     digitalWrite(IN1,LOW);
     digitalWrite(IN2,HIGH);
@@ -91,6 +93,7 @@ void go_Advance(int fd,int l_speed,int r_speed) {
     pca9685PWMWrite(fd, ENA, 0, l_speed);
     pca9685PWMWrite(fd, ENB, 0, r_speed);
 }
+
 void go_Left(int fd,int l_speed,int r_speed) {
     digitalWrite(IN1,HIGH);
     digitalWrite(IN2,LOW);
@@ -99,6 +102,7 @@ void go_Left(int fd,int l_speed,int r_speed) {
     pca9685PWMWrite(fd, ENA, 0, l_speed);
     pca9685PWMWrite(fd, ENB, 0, r_speed);
 }
+
 void go_Right(int fd,int l_speed,int r_speed) {
     digitalWrite(IN1,LOW);
     digitalWrite(IN2,HIGH);
@@ -107,6 +111,7 @@ void go_Right(int fd,int l_speed,int r_speed) {
     pca9685PWMWrite(fd, ENA, 0, l_speed);
     pca9685PWMWrite(fd, ENB, 0, r_speed);
 }
+
 void stop_car(int fd) {
     digitalWrite(IN1,LOW);
     digitalWrite(IN2,LOW);
@@ -115,6 +120,7 @@ void stop_car(int fd) {
     pca9685PWMWrite(fd, ENA, 0, 0);
     pca9685PWMWrite(fd, ENB, 0, 0);
 }
+
 //Obstacle Detection Commands
 void go_back(int fd,int speed) {
     digitalWrite(IN1,HIGH);
@@ -124,6 +130,7 @@ void go_back(int fd,int speed) {
     pca9685PWMWrite(fd, ENA, 0, speed);
     pca9685PWMWrite(fd, ENB, 0, speed);
 }
+
 void go_advance(int fd,int speed) {
     digitalWrite(IN1,LOW);
     digitalWrite(IN2,HIGH);
@@ -132,6 +139,7 @@ void go_advance(int fd,int speed) {
     pca9685PWMWrite(fd, ENA, 0, speed);
     pca9685PWMWrite(fd, ENB, 0, speed);
 }
+
 void go_left(int fd,int left_speed,int right_speed) {
     digitalWrite(IN1,HIGH);
     digitalWrite(IN2,LOW);
@@ -140,6 +148,7 @@ void go_left(int fd,int left_speed,int right_speed) {
     pca9685PWMWrite(fd, ENA, 0, left_speed);
     pca9685PWMWrite(fd, ENB, 0, right_speed);
 }
+
 void go_right(int fd,int left_speed,int right_speed) {
     digitalWrite(IN1,LOW);
     digitalWrite(IN2,HIGH);
@@ -148,6 +157,7 @@ void go_right(int fd,int left_speed,int right_speed) {
     pca9685PWMWrite(fd, ENA, 0, left_speed);
     pca9685PWMWrite(fd, ENB, 0, right_speed);
 }
+
 // ctrl-C key event handler
 void my_handler(int s){
            stop_car(fd);
@@ -155,6 +165,7 @@ void my_handler(int s){
            exit(1); 
 
 }
+
 int distance() {
         //Send trig pulse
         digitalWrite(TRIG, HIGH);
@@ -174,6 +185,7 @@ int distance() {
  		if (distance==0) distance=1000;
         return distance;
 }
+
 int tracking(SPEED) {
 	//Defines Speeds relative to input
 	int low_speed = SPEED / 4; 
@@ -271,6 +283,7 @@ int tracking(SPEED) {
         }
     }
 }
+
 int obstacle_avoid(SPEED) {
 	// Setup with pinbase 300 and i2c location 0x40
 	//Defines speeds relative to input of obstacle_avoid function
@@ -352,6 +365,7 @@ int obstacle_avoid(SPEED) {
 		} 
 	}
 }
+
 int main(void) {
 	//failsafe for Pi Setup
 	if(wiringPiSetup()==-1){
