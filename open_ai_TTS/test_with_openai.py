@@ -16,7 +16,7 @@ import os
 from playsound import playsound
 
 #Global Variables
-openai.api_key = "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"
+openai.api_key = ""
 terminators = ["stop", "end"]
 speak_options = ["speak", "Speak", "Talk", "talk", "voice", "Voice", "s", "S"]
 type_options = ["type", "Type", "Write", "write", "t", "T"]
