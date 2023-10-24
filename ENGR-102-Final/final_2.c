@@ -1,4 +1,4 @@
-*
+/*
  * PROJECT 2:
  * Code developed within the context of ENGR102: Electromechanical Design at the University of San Diego
  * With aid from www.osoyoo.com, specifically lessons 2 and 3
