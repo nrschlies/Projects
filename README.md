@@ -1,18 +1,48 @@
 # Projects
-Some of the projects I've worked on:
 
-* **wiki-find.py:** Uses Wikipedia library to generate random article in a tkinter window.  
-* **led-cam.py:** Uses Raspberry Pi camera to recognize faces and shine red and blue lights if the face is a match to a predetermined list.  
-* **ENGR-102-Final:** Final project of ENGR102: Electromechanical System Design, built a robot car to showcase line tracking and obstacle detection.  
-* **spotify-analytics.py:** Uses Spotify API to take the average analytics of a playlist and place them into a tkinter GUI window to present the average danceability, energy, key (WIP), loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo, and duration of a playlist. To test it out, enter your own Spotify Developer Client ID and Client Secret.
-* **ENGR-103:** Throughout the semester long course, contains the Ideation and prototyping of an obstacle detection system for the braille institute.
-* **LED-Paintings:** Wrote Arduino code that uses a joystick to rotate through different programs for a LED strip.
-   * Mode 1: Paintings (Art used with permission):
-      Uses a 100x3 matrix to store rgb values and randomly picks a pixel to put into a neopixel LED strip.
-      Rotate through paintings with joystick movement.
-      Rotate to mode 2 by pushing the joystick.
-   * Mode 2: Special Functions (Includes some code written Adafruit used and credited):
-      Specific functions written for led strip.
-      Rotate through functions with joystick movement.
-      Rotate back to mode 1 by pushing the joystick.
- * **test_with_openai.py:** Gaining familiarity with openai API through a TTS to audio response program  
+A collection of projects I've embarked upon:
+
+- **Encryption Algorithms**:
+    - **Description**: An ambitious endeavor into the realm of cryptography, crafting a myriad of encryption algorithms purely using built-in C methods.
+        - Files:
+            - 3des.c
+            - CaesarCipher.c
+            - RSA.c
+            - algotest.c
+            - caesar_cipher.c
+            - enigma_machine.c
+            - playfair_cipher.c
+            - rc4.c
+            - substitution_cipher.c
+            - transposition_cipher.c
+            - vigenere_cipher.c
+  
+- **ENGR-102-Final**: 
+    - **Description**: A culmination of ENGR102: Electromechanical System Design. Showcased a robot car demonstrating line tracking and obstacle detection capabilities.
+  
+- **ENGR-103**: 
+    - **Description**: Over the duration of this semester-long course, ideated and prototyped an obstacle detection system catered for the Braille Institute.
+  
+- **pi_approx.py**:
+    - **Description**: Implemented Monte Carlo approximation alongside a circle representation to deduce the value of pi.
+
+- **led-cam.py**: 
+    - **Description**: Utilizes face_recognition library for RasPi cam and checks if that face recognition is in the list of blacklisted users. If the raspberry pi camera detects a blacklisted face, a series of Neopixel lights alternate in a blue-red pattern.
+    - **Author**: Noah Schliesman
+  
+- **spotify-analytics.py**: 
+    - **Description**: Utilizes Spotify API to calculate and present average analytics of a playlist in a tkinter GUI window. Metrics include average danceability, energy, key (WIP), loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo, and duration.
+    - **Note**: To experiment, input your Spotify Developer Client ID and Client Secret.
+
+- **LED-Paintings**: 
+    - **Description**: Developed Arduino code using a joystick to transition between various programs designed for an LED strip.
+  
+- **wiki-find.py**: 
+    - **Description**: Generates a random Wikipedia article displayed in a tkinter window using the Wikipedia library.
+  
+- **test_with_openai.py**: 
+    - **Description**: Embark on an original interface blending OpenAI's cutting-edge capabilities with Text-to-Speech technology. Designed with a forward-thinking approach, it demonstrates a deep understanding of multithreading for simultaneous processing (still under development). This practical tool captivates users with its intuitive design and color-coded console outputs, ideal for those seeking to dive into the AI realm.
+ 
+- **8qnsv2.py**:
+    - **Description**: Dive deep into the intricacies of the N-Queens puzzle with this creative spin. Utilizing three distinct, complex strategies: Simulated Annealing, Hill Climbing with Sidestep, and Depth First Search, this project exhibits depth in understanding AI search algorithms. With `tkinter` at its core, the GUI presents an aesthetic visualization of real-time puzzle-solving, making it a compelling tool for both educational demonstrations and AI enthusiasts.
+
