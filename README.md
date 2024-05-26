@@ -1,9 +1,9 @@
 # Projects
 
-A collection of projects I've embarked upon:
+A collection of projects I've worked on:
 
 - **Encryption Algorithms**:
-    - **Description**: An ambitious endeavor into the realm of cryptography, crafting a myriad of encryption algorithms purely using built-in C methods.
+    - **Description**: An ambitious endeavor into  cryptography, developing the following algorithms using built-in C methods.
         - Files:
             - 3des.c
             - CaesarCipher.c
@@ -21,10 +21,10 @@ A collection of projects I've embarked upon:
     - **Description**: A culmination of ENGR102: Electromechanical System Design. Showcased a robot car demonstrating line tracking and obstacle detection capabilities.
   
 - **ENGR-103**: 
-    - **Description**: Over the duration of this semester-long course, ideated and prototyped an obstacle detection system catered for the Braille Institute.
+    - **Description**: Over the duration of this semester-long course, ideated and prototyped an obstacle detection system catered for the Braille Institute for the Blind.
   
 - **pi_approx.py**:
-    - **Description**: Implemented Monte Carlo approximation alongside a circle representation to deduce the value of pi.
+    - **Description**: Implemented Monte Carlo approximation alongside a circle representation to analytically deduce the value of pi.
 
 - **led-cam.py**: 
     - **Description**: Utilizes face_recognition library for RasPi cam and checks if that face recognition is in the list of blacklisted users. If the raspberry pi camera detects a blacklisted face, a series of Neopixel lights alternate in a blue-red pattern.
@@ -38,11 +38,11 @@ A collection of projects I've embarked upon:
     - **Description**: Developed Arduino code using a joystick to transition between various programs designed for an LED strip.
   
 - **wiki-find.py**: 
-    - **Description**: Generates a random Wikipedia article displayed in a tkinter window using the Wikipedia library.
+    - **Description**: Generates a random Wikipedia article displayed in a tkinter window using the Wikipedia library. 
   
 - **test_with_openai.py**: 
-    - **Description**: Embark on an original interface blending OpenAI's cutting-edge capabilities with Text-to-Speech technology. Designed with a forward-thinking approach, it demonstrates a deep understanding of multithreading for simultaneous processing (still under development). This practical tool captivates users with its intuitive design and color-coded console outputs, ideal for those seeking to dive into the AI realm.
+    - **Description**: Interface blending OpenAI's cutting-edge capabilities with Text-to-Speech technology. Still under development.
  
 - **8qnsv2.py**:
-    - **Description**: Dive deep into the intricacies of the N-Queens puzzle with this creative spin. Utilizing three distinct, complex strategies: Simulated Annealing, Hill Climbing with Sidestep, and Depth First Search, this project exhibits depth in understanding AI search algorithms. With `tkinter` at its core, the GUI presents an aesthetic visualization of real-time puzzle-solving, making it a compelling tool for both educational demonstrations and AI enthusiasts.
+    - **Description**: N-Queens puzzle utilizing three strategies: Simulated Annealing, Hill Climbing with Sidestep, and Depth First Search, this project exhibits depth in understanding AI search algorithms. With `tkinter` at its core, the GUI presents an aesthetic visualization of real-time puzzle-solving, making it a compelling tool for both educational demonstrations and AI enthusiasts.
 
